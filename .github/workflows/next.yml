@@ -1,0 +1,41 @@
+name: CI/CD - next.js
+
+on:
+    push:
+        branches:
+            - use-urls
+
+jobs:
+    build:
+        name: Build, lint, and test on ${{ matrix.os }}
+
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+
+        steps:
+            - name: ❇️ Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Set up Bun
+              uses: oven-sh/setup-bun@v1
+              with:
+                  bun-version: latest
+
+            - name: 📥 Install dependencies with Bun (with cache)
+              run: bun install --cwd packages/next
+
+            - name: 🛠️ Build supabase-cli
+              run: cd packages/next/ && bun run build && cp -r cli/ dist/
+
+            - name: 🔄 Change package name
+              run: |
+                  jq '.name = "@rocket-kit/next"' packages/next/package.json > temp.json
+                  mv temp.json packages/next/package.json
+
+            - name: 🚀 Publish to npm
+              uses: JS-DevTools/npm-publish@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
+                  package: packages/next/package.json

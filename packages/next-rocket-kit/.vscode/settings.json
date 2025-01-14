@@ -1,0 +1,75 @@
+{
+  // editor
+  "editor.bracketPairColorization.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+    // Set the default
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.cursorBlinking": "phase",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  // Enable per-language
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.hidesExplorerArrows": false,
+  "material-icon-theme.files.associations": {
+    "route.ts": "routing",
+    "page.tsx": "Exe",
+    "prisma.config.ts": "tsconfig",
+    "prisma.config.js": "jsconfig",
+  },
+  "material-icon-theme.folders.associations": {
+    "Schema": "docs",
+    "Schemas": "docs",
+    "schema": "docs",
+    "schemas": "docs",
+    "table": "class",
+    "Entity": "class",
+    "Entitys": "class",
+    "entity": "class",
+    "entitys": "class",
+    "dto": "interface",
+    "dtos": "interface",
+    "redux": "redux-actions",
+    "querys": "scripts",
+    "query": "scripts",
+    "state": "redux-store",
+    "publics": "public",
+    "files": "docs",
+    "file": "public",
+    "codes": "docs",
+    "enum": "interface",
+    "enums": "interface",
+    "(pages)": "views",
+  },
+  "cSpell.words": [
+    "dmdq",
+    "Iiwicm",
+    "SECRECT",
+    "supabase",
+    "XVCJ",
+    "ZSIs"
+  ],
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rome.rome"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "exportall.config.relExclusion": [
+    "/src/resolvers/index.ts"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "rocket-kit",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "rolldown": "^1.0.0-beta.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
