@@ -26,7 +26,7 @@ jobs:
             - name: 📥 Install dependencies with Bun (with cache)
               run: bun install --cwd packages/next
 
-            - name: 🛠️ Build supabase-cli
+            - name: 🛠️ Build next
               run: cd packages/next/ && bun run build && cp -r cli/ dist/
 
             - name: 🔄 Change package name
