@@ -39,3 +39,9 @@ jobs:
               with:
                   token: ${{ secrets.NPM_TOKEN }}
                   package: packages/nextjs/package.json
+
+            - name: Save state
+              run: echo "state_name=state_value" >> $GITHUB_STATE
+
+            - name: Set output
+              run: echo "output_name=output_value" >> $GITHUB_OUTPUT
