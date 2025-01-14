@@ -2,6 +2,7 @@
     "name": "@rocket-kit/next",
     "version": "1.0.1-alpha.2",
     "license": "MIT",
+    "private": "false",
     "author": {
         "name": "leomerida15",
         "email": "dimasmerida15@gmail.com",
