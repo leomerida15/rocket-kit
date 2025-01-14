@@ -1,4 +1,4 @@
-name: CI/CD - next
+name: CI/CD - nextjs
 
 on:
     push:
@@ -24,18 +24,18 @@ jobs:
                   bun-version: latest
 
             - name: 📥 Install dependencies with Bun (with cache)
-              run: bun install --cwd packages/next
+              run: bun install --cwd packages/nextjs
 
-            - name: 🛠️ Build next
-              run: cd packages/next/ && bun run build && cp -r cli/ dist/
+            - name: 🛠️ Build nextjs
+              run: cd packages/nextjs/ && bun run build && cp -r cli/ dist/
 
             - name: 🔄 Change package name
               run: |
-                  jq '.name = "@rocket-kit/next"' packages/next/package.json > temp.json
-                  mv temp.json packages/next/package.json
+                  jq '.name = "@rocket-kit/nextjs"' packages/nextjs/package.json > temp.json
+                  mv temp.json packages/nextjs/package.json
 
             - name: 🚀 Publish to npm
               uses: JS-DevTools/npm-publish@v1
               with:
                   token: ${{ secrets.NPM_TOKEN }}
-                  package: packages/next/package.json
+                  package: packages/nextjs/package.json

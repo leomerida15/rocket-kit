@@ -42,7 +42,7 @@
             "pre-commit": "tsdx lint"
         }
     },
-    "name": "@rocket-kit/next",
+    "name": "@rocket-kit/old-next",
     "author": "Dimas Mérida - gh: leomerida15",
     "module": "dist/next-rocket-kit.esm.js",
     "size-limit": [
