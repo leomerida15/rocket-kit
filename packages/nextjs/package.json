@@ -1,8 +1,7 @@
 {
     "name": "@rocket-kit/next",
-    "version": "1.0.4-alpha",
+    "version": "1.0.5-alpha",
     "license": "MIT",
-    "private": "false",
     "author": {
         "name": "leomerida15",
         "email": "dimasmerida15@gmail.com",
@@ -12,16 +11,15 @@
     "module": "dist/next.esm.js",
     "typings": "dist/index.d.ts",
     "bin": {
-        "openapi": "./dist/cli/index.js"
+        "openapi": "./dist/cli/cli.esm.js"
     },
     "files": [
         "dist"
     ],
     "scripts": {
         "analyze": "size-limit --why",
-        "build": "dts build",
+        "build": "dts build && cp -r cli/ dist/",
         "lint": "dts lint",
-        "prepare": "dts build",
         "size": "size-limit",
         "start": "dts watch",
         "test": "dts test"

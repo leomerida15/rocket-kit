@@ -3,7 +3,7 @@ import { OpenApiGeneratorV3, OpenApiGeneratorV31 } from '@asteasolutions/zod-to-
 import { Command } from 'commander';
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { getPath } from './funcs';
+import { getPath } from './funcs/getPath.esm';
 
 const program = new Command();
 

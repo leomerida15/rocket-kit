@@ -1,6 +1,6 @@
 import { join, relative, resolve } from 'node:path';
 import { z } from 'zod';
-import { PathStructure } from './getPath';
+import { PathStructure } from './PathStructure.esm';
 
 export const getPath = async ({ input }) => {
     const pkJson = new PathStructure({
